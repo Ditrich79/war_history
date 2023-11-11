@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ancient Wars</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+{% include 'articles/navbar.html' %}
+<div class="content">
+    <div class="wrapper2">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
