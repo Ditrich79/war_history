@@ -1,5 +1,5 @@
 {% extends 'articles/base.html' %}
-
+{% load static %}
 {% block content %}
     <header>
       <div class="container">
@@ -16,13 +16,13 @@
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="F:/warhistory_html/images/his4.jpg" class="d-block w-100">
+                <img src="{% static 'articles/his4.jpg' %}" class="d-block w-100">
               </div>
               <div class="carousel-item">
-                <img src="F:/warhistory_html/images/his5.jpg" class="d-block w-100">
+                <img src="{% static 'articles/his5.jpg' %}" class="d-block w-100">
               </div>
               <div class="carousel-item">
-                <img src="F:/warhistory_html/images/his6.jpg" class="d-block w-100">
+                <img src="{% static 'articles/his6.jpg' %}" class="d-block w-100">
               </div>
             </div>
           </div>
