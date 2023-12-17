@@ -33,69 +33,15 @@
           </div>
         </div>
         <div class="row">
+          {% for article in articles %}
           <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/1.bmp"></div>
+            <div class="image"><img style="width: 410px; height: 250px;" src="{{ article.image.url }}"></div>
             <div class="articles">
-            <h5 class="text-center">Вторжение галов</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
+            <h5 class="text-center">{{ article.title }}</h5>
+            <p class="text fst-italic">{{ article.description|striptags|truncatechars:400 }}</p>
             </div>
           </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/2.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Вторжение германцев</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/3.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Захват Рима</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/4.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Битвы с Ганнибалом</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/5.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Пуническая война</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/1.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Тиран Сиракуз</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/1.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Вторжение галов</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/1.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Вторжение галов</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="image"><img style="width: 410px; height: 250px;" src="F:/warhistory_html/images/1.bmp"></div>
-            <div class="articles">
-            <h5 class="text-center">Вторжение галов</h5>
-            <p class="text fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti corrupti nobis architecto corporis molestiae quia provident, dolor voluptatem alias amet fuga, quaerat perspiciatis molestias cum, doloribus quisquam delectus. Doloribus.</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>

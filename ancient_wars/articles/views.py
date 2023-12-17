@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Article
 
 
 def articles(request):
-    return render(request, 'articles/articles.html')
+    articles = Article.objects.all()
+    return render(request, 'articles/articles.html', {'articles': articles})
